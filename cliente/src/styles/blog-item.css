@@ -1,0 +1,28 @@
+.blog__item {
+    border: 1px solid #7c8a972e;
+}
+
+.blog__title {
+    text-decoration: none;
+    color: #000d6b;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.blog__title:hover {
+    color: #f9a826;
+}
+
+@media only screen and (max-width: 768px) {
+.blog__info p {
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    margin-top: 10px;
+    }
+    
+    .blog__title {
+        font-size: 1.1rem;
+    }
+}     
+  
