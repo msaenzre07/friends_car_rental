@@ -31,50 +31,51 @@ const Register = () => {
       <Helmet title="">
       <CommonSection title="Registro de Usuarios" />
       <section>
-        <Container>
-          <Row>
-            <Col lg="9" className= "m-auto">
+      <Container>
+        <Row>
+          <Col lg="9" className= "m-auto">
             <div className="login_container d-flex justify-content-between">
             <div classNme = "login_img">
-                <img src={registerImg} alt="" />
+              <img src={registerImg} alt="" />
             </div>
 
             <div className="login_form">
             <div className="user">
-                <img src={userIcon} alt="" />
-                </div> 
+              <img src={userIcon} alt="" />
+              </div> 
             <h2>Registro</h2>
 
-           <Form onSubmit={handleClick}>
-            <FormGroup>
-        <input type= "usuario" placeholder="Usuario" required id="usuario"
-        onchange={handleChange} />
-            </FormGroup>
+          <Form onSubmit={handleClick}>
+          <FormGroup>
+            <input type= "usuario" placeholder="Usuario" required id="usuario"
+            onchange={handleChange} />
+          </FormGroup>
 
-            <FormGroup>
-        <input type= "email" placeholder="Correo electrónico" required id="email"
-        onchange={handleChange} />
-            </FormGroup>
+          <FormGroup>
+            <input type= "email" placeholder="Correo electrónico" required id="email"
+            onchange={handleChange} />
+          </FormGroup>
 
-            <FormGroup>
-        <input type= "password" placeholder="Contraseña" required id="password"
-        onchange={handleChange} />
-            </FormGroup>
-            <FormGroup>
-        <input type= "confirmar_password" placeholder="Confirmar contraseña" required id="confirmar_password"
-        onchange={handleChange} />
-            </FormGroup>
+          <FormGroup>
+            <input type= "password" placeholder="Contraseña" required id="password"
+             onchange={handleChange} />
+          </FormGroup>
 
-            <Button className="btn secondary_btn auth_btn" type ="submit">Registrarse</Button>
-           </Form>
+          <FormGroup>
+           <input type= "confirmar_password" placeholder="Confirmar contraseña" required id="confirmar_password"
+           onchange={handleChange} />
+         </FormGroup>
+
+          <Button className="btn secondary_btn auth_btn" type ="submit">Registrarse</Button>
+          </Form>
            <p>¿Ya tienes cuenta?<Link to="/login">Login</Link></p>
            </div>
             </div>
-            </Col>
+              </Col>
             </Row>
-          </Container> 
+            </Container> 
           </section>
-        </Helmet>
+      </Helmet>
     );
 };
 

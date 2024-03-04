@@ -12,7 +12,7 @@ const Layout = () => {
         </div>
         <Footer />
       </Fragment>
-    ) 
+    ); 
 };
 
 export default Layout;

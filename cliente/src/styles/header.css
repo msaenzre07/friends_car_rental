@@ -40,12 +40,13 @@
 
   /* header middle style */
 
-  .header__middle {
+.header__middle {
     padding: 20px 0px;
-  }
+}
   
   .logo h1 a span {
     font-size: 1.5rem;
+    text-align: left;
   }
   
   .logo h1 a i {
@@ -136,6 +137,7 @@
     color: #f9a826;
   }
 
+  
   @media only screen and (max-width: 768px) {
     .header__top,
     .header__middle,

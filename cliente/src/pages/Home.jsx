@@ -29,6 +29,7 @@ const Home = () => {
                   <h2>No espere más ¡Visítanos!</h2>
                 </div>
               </Col>
+              
               <Col lg="8" md="8" sm="12">
                 <FindCarForm />
               </Col>

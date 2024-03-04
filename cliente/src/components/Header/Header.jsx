@@ -6,45 +6,48 @@ import "../../styles/header.css";
 
 
 const navLinks = [
-    {
-      path: "/home",
-      display: "Home",
-    },
-    {
-      path: "/vehiculos",
-      display: "Administrador",
-    },
-    {
-      path: "/marcasvehiculos",
-      display: "Marcas Autos",
-    },
-    {
-      path: "/tiposvehiculos",
-      display: "Tipos Autos",
-    },
-    {
-    path: "/detallesUsuarios",
-    display: "Usuarios",
-  },
-    {
-      path: "/about",
-      display: "Quiénes Somos",
-    },
-    {
-      path: "/cars",
-      display: "Guía de Autos",
-    },
+{
+  path: "/home",
+  display: "Home",
+},
+    
+{
+  path: "/vehiculos",
+  display: "Administrador",
+},
+{
+  path: "/marcasvehiculos",
+  display: "Marcas Autos",
+},
+{
+  path: "/tiposvehiculos",
+  display: "Tipos Autos",
+},
+
+{
+  path: "/detallesUsuarios",
+  display: "Usuarios",
+},
+
+{
+  path: "/cars",
+  display: "Guía de Autos",
+},
   
-    {
-      path: "/blogs",
-      display: "Blog",
-    },
-    {
-      path: "/contact",
-      display: "Contacto",
-    },
+{
+  path: "/about",
+  display: "Quiénes Somos",
+},
+{
+  path: "/blogs",
+  display: "Blog",
+},
+{
+  path: "/contact",
+  display: "Contacto",
+},
   
-  ];
+];
 
 const Header = () => {
     const menuRef = useRef(null);
@@ -59,9 +62,7 @@ const Header = () => {
           <Row>
             <Col lg="6" md="6" sm="6">
               <div className="header__top__left">
-                <span>Necesita Ayuda?</span>
                 <span className="header__top__help">
-                  <i class="ri-phone-fill"></i> 506 84797554
                 </span>
               </div>
             </Col>
