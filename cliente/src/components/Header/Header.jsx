@@ -7,44 +7,32 @@ import "../../styles/header.css";
 
 const navLinks = [
 {
-  path: "/home",
-  display: "Home",
+path: "/home",
+display: "Home",
+},
+{
+path: "/about",
+display: "Quiénes Somos",
 },
     
 {
-  path: "/vehiculos",
-  display: "Administrador",
+path: "/vehiculos",
+display: "Mantenimiento de Autos",
 },
 {
-  path: "/marcasvehiculos",
-  display: "Marcas Autos",
-},
-{
-  path: "/tiposvehiculos",
-  display: "Tipos Autos",
-},
-
-{
-  path: "/detallesUsuarios",
-  display: "Usuarios",
-},
-
-{
-  path: "/cars",
-  display: "Guía de Autos",
+path: "/cars",
+display: "Reservar",
 },
   
+
 {
-  path: "/about",
-  display: "Quiénes Somos",
+path: "/detallesUsuarios",
+display: "Usuarios",
 },
+
 {
-  path: "/blogs",
-  display: "Blog",
-},
-{
-  path: "/contact",
-  display: "Contacto",
+  path: "/contacto",
+  display: "Contáctenos",
 },
   
 ];

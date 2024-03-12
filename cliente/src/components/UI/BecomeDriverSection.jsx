@@ -17,10 +17,6 @@ const BecomeDriverSection = () => {
                 <h2 className="section__title become__driver-title">
                   ¿Tienes alguna duda? ¡Estaremos encantados de ayudarte!
                 </h2>
-    
-                <button className="btn become__driver-btn mt-4">
-                 Vive una experiencia única
-                </button>
             </Col>
           </Row>
         </Container>

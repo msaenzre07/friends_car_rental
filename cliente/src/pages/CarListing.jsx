@@ -5,20 +5,14 @@ import CommonSection from "../components/UI/CommonSection";
 import CarItem from "../components/UI/CarItem";
 import carData from "../assets/data/carData";
 
-
 const CarListing = () => {
-    return (
-        <Helmet title="Cars">
-          <CommonSection title="Guía de Autos" />
+  return (
+    <Helmet title="Reservar">
+      <CommonSection title="Reserva Un Vehículo de Alquiler" />
 
-          <section>
+      <section>
         <Container>
           <Row>
-          <Col lg="12">
-            <div className=" d-flex align-items-center gap-3 mb-5">
-            </div>
-            </Col>
-          
             {carData.map((item) => (
               <CarItem item={item} key={item.id} />
             ))}
@@ -26,7 +20,7 @@ const CarListing = () => {
         </Container>
       </section>
     </Helmet>
-  );   
+  );
 };
 
 export default CarListing;

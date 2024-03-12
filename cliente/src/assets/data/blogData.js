@@ -9,7 +9,7 @@ const blogData = [
     title: "¿Quiéres recorrer algo especial?",
     imgUrl: img01,
     description:
-      " Te ofrecemos una amplia gama de vehículos y precios que más se ajusten a tus necesidades.",
+      "Tu viaje comienza con nosotros, donde cada kilometro es una oportunidad para vivir aventuras únicas. ¡Abre la puerta de la libertad de viajar!",
   },
 
   {
@@ -17,7 +17,7 @@ const blogData = [
     title: "Compromiso de mejor precio",
     imgUrl: img02,
     description:
-      "En nuestra flota encontrarás autos económicos, ven y descubra excelentes precios y disfruta de tu viaje.",
+      "Ofrecemos una amplia gama de vehículos económicos y precios accesibles para adaptarnos a tus preferencias y necesidades de viaje.",
   },
 
   {
@@ -25,7 +25,7 @@ const blogData = [
     title: "¡Preparamos tu auto de alquiler!",
     imgUrl: img03,
     description:
-      " Nuestro servicio de atención al cliente está disponible de 09:00 a.m a 05:00 p.m. los 7 días de la semana, para brindarte la ayuda y el respaldo que necesites. ¿Qué estás esperando? ",
+      " Nuestro servicio de atención al cliente está disponible de 09:00 a.m a 05:00 p.m. los 7 días de la semana. ¿Qué estás esperando? ",
     
   },
 ];

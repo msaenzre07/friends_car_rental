@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from 'react';
+import axios from "axios";
 import { Container, Row, Form } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
@@ -7,87 +8,122 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Swal from 'sweetalert2';
 
-// variables que add valores en los campos
-
 
 const DetallesUsuarios= () => {
 
-    return  (
-      <Helmet title="">
-        <CommonSection title="Detalles de Usuarios" />
-          <section>
-           
-          <div className="content-detalles ">
-          
-          <h2 className="usuarios">Digite la<span>información solicitada</span> </h2>
-          <div className="contact-wrapper animated bounceInUp">
-            <div class="contact-form">s
-            <h3>Para más información</h3>
-            <Form action="">
-            <p>
-              <label htmlFor="exampleFormControlInput1" className="form-label">Nombre completo:</label>
-              <input type="Nombre" className="form-control" id="Nombre"/>
-            </p>
-            <p>
-            <div className="col-md-6">
-              <label htmlFor="exampleFormControlInput1" className="form-label">Número de cédula o de pasaporte:</label>
-              <input type="text" className="form-control" id="exampleFormControlInput1"/>
-            </div>
-            </p>
-            <p>
-            <div className="col-md-6">
-              <label htmlFor="exampleFormControlInput1" className="form-label">Edad:</label>
-              <input type="text" className="form-control" id="exampleFormControlInput1"/>
-            </div>
-            </p>
-            <p>
-            <div className="col-md-6">
-              <label htmlFor="exampleFormControlInput1" className="form-label">Correo electrónico:</label>
-              <input type="text" className="form-control" id="exampleFormControlInput1"/>
-            </div>
-            </p>
-            <p>
-            <div className="titulo-imagen">
-              <div className="car-titulo">
-               Adjuntar foto de la "Licencia de conducir", "Cédula de Identidad" o "Pasaporte":
-            </div>
-            <div className="input-group mb-3">
-              <input type="file" className="form-control" id="inputGroupFile02"/>
-            <label className="input-group-text" htmlfor="inputGroupFile02">Upload</label>
-            </div>
-            </div>
-            </p>
-            <p>
-            <div className="mb-3">
-                <button type="submit" className="btn btn-primary mt-3"value="Submit">Enviar</button>
-            </div>
-            </p>
-            </Form>
-            </div>
-            <div class="contact-info">
-                <h4>More Info</h4>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Baker Street</li>
-                    <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
-                    <li><i class="fas fa-envelope-open-text"></i> contact@website.com</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
-                <p>Company.com</p>
-            </div>
+// variables que add valores en los campos
+const [nombre, setNombre] = useState("");
+  const [numCedula, setNumCedula] = useState("");
+  const [edad, setEdad] = useState("");
+  const [email, setEmail] = useState("");
+  const [file, setFile] = useState("");
+  const [id, setId] = useState();
 
 
 
-
-
-            </div> 
-            </div>
-           
-              
-          
-         
-          </section>
-        </Helmet>
-    );
+//Add datos Usuarios
+const addDetallesUsuarios = () => {
+  axios.post("http://localhost:3001/api/create", {
+     nombre: nombre,
+     numCedula: numCedula,
+      edad: edad,
+      email:email,
+      file: file
+    })
+    .then(() => {
+     
+      Swal.fire({
+        title: "<strong>Registro exitoso!!!</strong>",
+        html:
+          "<i>La información <strong> " +
+          nombre +
+          " </strong>fue registrada con exito!!!</i>",
+        icon: "sucess",
+        timer: 3000,
+      }).catch(function (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text:
+            JSON.parse(JSON.stringify(error)).message === "Network Error"
+              ? "Intente más tarde"
+              : JSON.parse(JSON.stringify(error)).message,
+        });
+      });
+    });
 };
+
+
+      return  (
+        <Helmet title="">
+          <CommonSection title="Detalles de Usuarios" />
+            <section className="background-section">
+              <Container >
+              <Row className="justify-content-center">
+               
+      
+              <div class="col-md-8 p-5 ">
+                  <h2>Digite la información solicitada</h2>
+                 
+            <Form className="row g-3 detalleForm mt-4">
+              <div className="col-md-6">
+  
+                <label htmlFor="exampleFormControlInput1" className="form-label">Nombre completo:</label>
+                <input type="text"  value={nombre}
+                      onChange={(event) => {
+                        setNombre(event.target.value);
+                      }}
+                className="form-control" id="exampleFormControlInput1"/>
+              </div>
+  
+              <div className="col-md-6">
+                <label htmlFor="exampleFormControlInput1" className="form-label">Número de cédula o pasaporte:</label>
+                <input type="text"  value={numCedula}
+                      onChange={(event) => {
+                        setNumCedula(event.target.value);
+                      }}
+                 className="form-control" id="exampleFormControlInput1"/>
+              </div>
+  
+              <div className="col-md-6">
+                <label htmlFor="exampleFormControlInput1" className="form-label">Edad:</label>
+                <input type="numeros"  value={edad}
+                      onChange={(event) => {
+                        setEdad(event.target.value);
+                      }}
+                className="form-control" id="exampleFormControlInput1"/>
+              </div>
+  
+              <div className="col-md-6">
+                <label htmlFor="exampleFormControlInput1" className="form-label">Correo electrónico:</label>
+                <input type="text"  value={email}
+                      onChange={(event) => {
+                        setEmail(event.target.value);
+                      }}
+                className="form-control" id="exampleFormControlInput1"/>
+              </div>
+  
+              <div className="titulo-imagen">
+                <div className="car-titulo">
+                 Adjuntar foto de la "Licencia de conducir", "Cédula de Identidad" o "Pasaporte":
+              </div>
+              <div className="input-group mb-3">
+                <input type="file" className="form-control" id="inputGroupFile02"/>
+              <label className="input-group-text" htmlfor="inputGroupFile02">Upload</label>
+              </div>
+              </div>
+  
+              <div className="mb-3">
+                  <button type="submit" className="btn btn-primary mt-3"value="Submit"onClick={addDetallesUsuarios} >Enviar</button>
+              </div>
+              </Form>
+       
+              </div>
+              </Row>
+              </Container>
+            </section>
+          </Helmet>
+      );
+  };
 
 export default DetallesUsuarios;

@@ -36,7 +36,7 @@ const About = () => {
                 </p>
                 
                 <p className="section__description">
-                  Estamos comprometidos con tu satisfacción, por eso te ofrecemos los mejores autos. ¡No espere más! Ven y conoce nuestros autos, te sorprederán.
+                  Estamos comprometidos con tu satisfacción, por eso te ofrecemos los mejores autos. ¡No espere más! Ven y conoce nuestros autos, te sorprenderán.
                 </p>
 
                 <div className=" d-flex align-items-center gap-3 mt-4">

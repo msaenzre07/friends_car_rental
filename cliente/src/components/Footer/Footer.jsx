@@ -11,18 +11,10 @@ const quickLinks = [
 },
 
 {
-  path: "/Vehiculos",
-  display: "Vehículos",
+  path: "/Reservar",
+  display: "Reservar",
 },
 
-{
-  path: "/cars",
-  display: "Guía de Autos",
-},
-{
-   path: "/blogs",
-  display: "Blog",
-},
 
 {
   path: "/contact",
@@ -74,7 +66,7 @@ const Footer = () => {
              
               <p className="office__info">Correo: hernanvalerio7190@gmail.com</p>
 
-              <p className="office__info">Horario de Oficina: 09am - 5pm</p>
+              <p className="office__info">Horario de Oficina: 09am - 05pm</p>
             </div>
           </Col>
 
