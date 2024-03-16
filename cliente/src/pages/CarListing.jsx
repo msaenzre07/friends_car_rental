@@ -8,7 +8,7 @@ import carData from "../assets/data/carData";
 const CarListing = () => {
   return (
     <Helmet title="Reservar">
-      <CommonSection title="Reserva Un Vehículo de Alquiler" />
+      <CommonSection title="Nuestros Vehículos de Alquiler" />
 
       <section>
         <Container>

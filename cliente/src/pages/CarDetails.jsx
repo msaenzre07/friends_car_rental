@@ -5,6 +5,7 @@ import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import { useParams } from "react-router-dom";
 import BookingForm from "../components/UI/BookingForm";
+import DevolverCar from "../components/UI/DevolverCar";
 
 const CarDetails = () => {
   const { slug } = useParams();
@@ -21,7 +22,7 @@ const CarDetails = () => {
         <Container>
           <Row>
             <Col lg="6">
-              <img src={singleCarItem.imgUrl} alt="" className="w-100" />
+              <img src={singleCarItem.imgUrl} alt="" className="w-100"  />
             </Col>
 
             <Col lg="6">
@@ -70,8 +71,15 @@ const CarDetails = () => {
 
             <Col lg="7" className="mt-5">
               <div className="booking-info mt-5">
-                <h5 className="mb-4 fw-bold ">Realizar Reservación</h5>
+                <h5 className="mb-4 fw-bold"style={{color: '#000d6b'}}>Formulario de Reservación de vehículos</h5>
                 <BookingForm />
+              </div>
+            </Col>
+
+            <Col lg="5" className="mt-5">
+              <div className="devolverCar__info mt-5">
+                <h5 className="mb-4 fw-bold" style={{color: '#000d6b'}}>Formulario devolución de Vehículos</h5>
+                <DevolverCar />
               </div>
             </Col>
           </Row>

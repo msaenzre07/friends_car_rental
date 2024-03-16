@@ -8,7 +8,7 @@ import img06 from "../all-images/cars-reservar/chevroletMex8.jpg";
 import img07 from "../all-images/cars-reservar/honda3.jpg";
 import img08 from "../all-images/cars-reservar/honda4.jpg";
 import img09 from "../all-images/cars-reservar/toyotaC-HR.jpg";
-import img10 from "../all-images/cars-reservar/toyotaElectrico.jpg";
+import img10 from "../all-images/cars-reservar/kia4.jpg";
 import img11 from "../all-images/cars-reservar/honda7.jpg";
 import img12 from "../all-images/cars-reservar/hyundai1.jpg";
 import img13 from "../all-images/cars-reservar/hyundai2.jpg";

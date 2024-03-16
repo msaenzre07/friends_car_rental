@@ -87,7 +87,7 @@ const addDetallesUsuarios = () => {
   
               <div className="col-md-6">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Edad:</label>
-                <input type="numeros"  value={edad}
+                <input type="numero"  value={edad}
                       onChange={(event) => {
                         setEdad(event.target.value);
                       }}
@@ -113,8 +113,8 @@ const addDetallesUsuarios = () => {
               </div>
               </div>
   
-              <div className="mb-3">
-                  <button type="submit" className="btn btn-primary mt-3"value="Submit"onClick={addDetallesUsuarios} >Enviar</button>
+              <div className="mb-3" style={{ textAlign: 'center' }}>
+                  <button type="submit" className="btn btn-primary mt-3 "value="Submit" onClick={addDetallesUsuarios} style={{ fontSize: '1.1em', padding: '8px 16px' }}>Enviar</button>
               </div>
               </Form>
        

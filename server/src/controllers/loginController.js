@@ -42,7 +42,7 @@ connection.query(
       if (match) {
       // Genera un token JWT y lo envía al cliente
         const token = jwt.sign({ email }, 'JWT_SECRET_KEY', {
-             expiresIn: '1h',
+             expiresIn: '2m',
         });
           res.status(200).json({ token });
         } else {

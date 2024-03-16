@@ -5,30 +5,29 @@ import { Link } from "react-router-dom";
 import "../../styles/footer.css";
 
 const quickLinks = [
-{
-  path: "/about",
-  display: "Quiénes Somos",
-},
+  {
+    path: "/about",
+    display: "Quiénes Somos",
+  },
 
-{
-  path: "/Reservar",
-  display: "Reservar",
-},
+  {
+    path: "/Reservar",
+    display: "Reservar",
+  },
 
-
-{
-  path: "/contact",
-  display: "Contacto",
- },
+  {
+    path: "/contact",
+    display: "Contacto",
+  },
 ];
 
 const Footer = () => {
-    const date = new Date();
-    const year = date.getFullYear();
-    return (
-      <footer className="footer">
-        <Container>
-          <Row>
+  const date = new Date();
+  const year = date.getFullYear();
+  return (
+    <footer className="footer">
+      <Container>
+        <Row>
           <Col lg="4" md="4" sm="12">
             <div className="logo footer__logo">
               <h1>
@@ -41,8 +40,10 @@ const Footer = () => {
               </h1>
             </div>
             <p className="footer__logo-content">
-              Aviva tu pasión por los viajes, ven disfruta de una experiencia increíble en Friend's Car Rental, te esperamos. Haz que una ocasión especial sea memorable.
-              Viaje a la velocidad del presente, es tu elección. Siempre.
+              Aviva tu pasión por los viajes, ven disfruta de una experiencia
+              increíble en Friend's Car Rental, te esperamos. Haz que una
+              ocasión especial sea memorable. Viaje a la velocidad del presente,
+              es tu elección. Siempre.
             </p>
           </Col>
 
@@ -62,9 +63,13 @@ const Footer = () => {
           <Col lg="3" md="4" sm="6">
             <div className="mb-4">
               <h5 className="footer__link-title mb-4">Sede Central</h5>
-              <p className="office__info">Alajuela, San Carlos, Ciudad Quesada</p>
-             
-              <p className="office__info">Correo: hernanvalerio7190@gmail.com</p>
+              <p className="office__info">
+                Alajuela, San Carlos, Ciudad Quesada
+              </p>
+
+              <p className="office__info">
+                Correo: hernanvalerio7190@gmail.com
+              </p>
 
               <p className="office__info">Horario de Oficina: 09am - 05pm</p>
             </div>
@@ -74,9 +79,9 @@ const Footer = () => {
             <div className="mb-4">
               <h5 className="footer__link-title">Contacta Con Nosotros</h5>
               <div className="newsletter">
-              <span>
-              <i class="ri-whatsapp-line"></i>Teléfono: +50684797554
-              </span>
+                <span>
+                  <i class="ri-whatsapp-line"></i>Teléfono: +50684797554
+                </span>
               </div>
             </div>
           </Col>
@@ -84,13 +89,14 @@ const Footer = () => {
           <Col lg="12">
             <div className="footer_copyright">
               <p className="section__footer d-flex align-items-center justify-content-center gap-1 pt-4">
-                <i class="ri-copyright-line"></i>Copyright {year}, Friend's Car Rental. Todos los derechos reservados.
+                <i class="ri-copyright-line"></i>Copyright {year}, Friend's Car
+                Rental. Todos los derechos reservados.
               </p>
             </div>
           </Col>
         </Row>
-        </Container>
-    </footer>          
+      </Container>
+    </footer>
   );
 };
 
