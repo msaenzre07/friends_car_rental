@@ -22,7 +22,7 @@ const HeroSlider = () => {
         <Container>
         <div className="slider__content ">
          {/*  <h4 className="text-light mb-3">Vive la aventura con nuestros vehículos, te ofrecemos excelentes precios</h4>*/}
-         <h1 className="text-light mb-4">Bienvenidos a Friend's Car Rental</h1>
+         <h1 className="text-light mb-4">Bienvenidos a Friend's Car Rent</h1>
         </div>
       </Container>
     </div>
@@ -31,7 +31,7 @@ const HeroSlider = () => {
         <Container>
           <div className="slider__content ">
           {/*  <h4 className="text-light mb-3">Vive la aventura con nuestros vehículos, te ofrecemos excelentes precios</h4>*/}
-            <h1 className="text-light mb-4">Bienvenidos a Friend's Car Rental</h1>
+            <h1 className="text-light mb-4">Bienvenidos a Friend's Car Rent</h1>
           </div>
         </Container>
       </div>
@@ -40,7 +40,7 @@ const HeroSlider = () => {
         <Container>
           <div className="slider__content ">
           {/*  <h4 className="text-light mb-3">Vive la aventura con nuestros vehículos, te ofrecemos excelentes precios</h4>*/}
-          <h1 className="text-light mb-4">Bienvenidos a Friend's Car Rental</h1>
+          <h1 className="text-light mb-4">Bienvenidos a Friend's Car Rent</h1>
           </div>
         </Container>
       </div>

@@ -26,7 +26,7 @@ const About = () => {
             </Col>
 
             <Col lg="6" md="6" sm="12">
-              <div className="about__page-content">
+              <div className="about__page-content" > 
                 <h2 className="section__title">
                   Con nuestros autos, cada kilómetro recorrido es una experiencia inigualable.
                 </h2>
@@ -35,7 +35,7 @@ const About = () => {
                   Visítanos y descubre por qué somos la mejor opción para alquilar autos. Con nuestros vehículos, no hay límites paras tus aventuras.
                 </p>
                 
-                <p className="section__description">
+                <p className="section__description" > 
                   Estamos comprometidos con tu satisfacción, por eso te ofrecemos los mejores autos. ¡No espere más! Ven y conoce nuestros autos, te sorprenderán.
                 </p>
 

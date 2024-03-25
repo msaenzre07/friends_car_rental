@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 /*import axios from 'axios';*/
-import { Container, Row, Col, Form, FormGroup, Button } from "reactstrap";
+import { Container, Row,  Form,  Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/login.css";
@@ -78,7 +78,7 @@ const Register = () => {
                       <div className="form-check d-flex justify-content-center mb-2">
                     <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                     <label className="form-check-label" for="form2Example3">
-                     Al registrarte, aceptas nuestras Condiciones de uso y Política de Privacidad <a href="#!"></a>
+                     Al registrarte, aceptas nuestras Condiciones de Uso y Política de Privacidad <a href="#!"></a>
                     </label>
                   </div>
 

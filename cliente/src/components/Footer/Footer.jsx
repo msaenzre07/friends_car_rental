@@ -34,14 +34,14 @@ const Footer = () => {
                 <Link to="/home" className=" d-flex align-items-center gap-2">
                   <i class="ri-roadster-fill"></i>
                   <span>
-                    Friend's Car <br /> Rental
+                    Friend's Car <br /> Rent
                   </span>
                 </Link>
               </h1>
             </div>
-            <p className="footer__logo-content">
+            <p className="footer__logo-content"style={{ textAlign: "justify"}} >
               Aviva tu pasión por los viajes, ven disfruta de una experiencia
-              increíble en Friend's Car Rental, te esperamos. Haz que una
+              increíble en Friend's Car Rent. Haz que una
               ocasión especial sea memorable. Viaje a la velocidad del presente,
               es tu elección. Siempre.
             </p>
@@ -64,14 +64,19 @@ const Footer = () => {
             <div className="mb-4">
               <h5 className="footer__link-title mb-4">Sede Central</h5>
               <p className="office__info">
+                <i class="ri-road-map-line" style={{ color: "#faa935" }}></i>
                 Alajuela, San Carlos, Ciudad Quesada
               </p>
 
               <p className="office__info">
+                <i class="ri-mail-check-line" style={{ color: "#faa935" }}></i>
                 Correo: hernanvalerio7190@gmail.com
               </p>
 
-              <p className="office__info">Horario de Oficina: 09am - 05pm</p>
+              <p className="office__info">
+                <i class="ri-timer-line" style={{ color: "#faa935" }}></i>
+                Horario de Oficina: 09am - 05pm
+              </p>
             </div>
           </Col>
 
@@ -80,7 +85,8 @@ const Footer = () => {
               <h5 className="footer__link-title">Contacta Con Nosotros</h5>
               <div className="newsletter">
                 <span>
-                  <i class="ri-whatsapp-line"></i>Teléfono: +50684797554
+                  <i class="ri-whatsapp-line" style={{ color: "#faa935" }}></i>
+                  Teléfono: +50684797554
                 </span>
               </div>
             </div>
@@ -90,7 +96,7 @@ const Footer = () => {
             <div className="footer_copyright">
               <p className="section__footer d-flex align-items-center justify-content-center gap-1 pt-4">
                 <i class="ri-copyright-line"></i>Copyright {year}, Friend's Car
-                Rental. Todos los derechos reservados.
+                Rent. Todos los derechos reservados.
               </p>
             </div>
           </Col>

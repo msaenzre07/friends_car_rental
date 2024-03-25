@@ -17,7 +17,7 @@ const servicesData = [
     id: 3,
     title: "Reserva Rápida y Sencilla",
     icon: "ri-community-line",
-    desc: " Reserve a través del sitio web Friend's Car Rental o visite nuestra sede central, será un gusto atenderles.",
+    desc: " Reserve a través del sitio web Friend's Car Rent o visite nuestra sede central, será un gusto atenderles.",
   },
 
   {
@@ -38,7 +38,7 @@ const servicesData = [
     id: 6,
     title: "Transferencia de Aeropuerto",
     icon: "ri-flight-takeoff-line",
-    desc: "¿Necesitas recoger el auto en el aeropuerto? Comunicate con nosotros, será un gusto atenderles. ",
+    desc: "¿Necesitas recoger el auto en el aeropuerto? Comunícate con nosotros, será un gusto atenderles." ,
   },
 ];
 

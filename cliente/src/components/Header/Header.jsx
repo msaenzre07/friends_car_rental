@@ -12,7 +12,7 @@ display: "Home",
 },
 {
 path: "/about",
-display: "Quiénes Somos",
+display: "¿Quiénes Somos?",
 },
     
 {
@@ -59,13 +59,13 @@ const Header = () => {
               <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
                 <button className = "btn secondary_btn">
                 <Link to="/login" className=" d-flex align-items-center gap-1">
-                  <i class="ri-login-circle-fill"></i> Iniciar sesión
+                  <i class="ri-login-circle-fill" style={{ color: '#faa935'}}></i> Iniciar sesión
                 </Link>
                 </button>
 
                 <button className="btn primary_btn">
                 <Link to="/register" className=" d-flex align-items-center gap-1">
-                  <i class="ri-user-fill"></i> Registrarse
+                  <i class="ri-user-fill" style={{ color: '#faa935'}}></i> Registrarse
                 </Link>
                 </button>
               </div>
@@ -79,12 +79,12 @@ const Header = () => {
         <Container>
           <Row>
             <Col lg="4" md="3" sm="4">
-              <div className="logo">
+              <div className="logo" >
                 <h1>
                   <Link to="/home" className=" d-flex align-items-center gap-2">
                     <i class="ri-roadster-fill"></i>
                     <span>
-                      Friend's <br /> Car Rental
+                      Friend's <br /> Car Rent 
                     </span>
                   </Link>
                 </h1>
@@ -94,7 +94,7 @@ const Header = () => {
             <Col lg="3" md="3" sm="4">
               <div className="header__location d-flex align-items-center gap-2">
                 <span>
-                  <i class="ri-map-pin-line"></i>
+                  <i class="ri-map-pin-line" style={{ color: '#faa935'}}></i>
                 </span>
                 <div className="header__location-content">
                   <h4>Alajuela</h4>
@@ -106,7 +106,7 @@ const Header = () => {
             <Col lg="3" md="3" sm="4">
               <div className="header__location d-flex align-items-center gap-2">
                 <span>
-                  <i class="ri-timer-line"></i>
+                  <i class="ri-timer-line" style={{ color: '#faa935'}}></i>
                 </span>
                 <div className="header__location-content">
                   <h4>Lunes a Domingo</h4>
@@ -123,7 +123,7 @@ const Header = () => {
             >
               <button className="header__btn btn ">
                 <Link to="/contact">
-                  <i class="ri-whatsapp-line"></i> Contáctenos
+                  <i class="ri-whatsapp-line" style={{ color: '#faa935'}}></i> Contáctenos 
                 </Link>
               </button>
             </Col>

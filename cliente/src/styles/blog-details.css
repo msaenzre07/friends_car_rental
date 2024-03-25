@@ -29,11 +29,13 @@
       .comment__content p {
         font-size: 0.8rem;
         line-height: 1.4rem;
+        text-align: justify;
       }
     
       .blog__details p {
         font-size: 0.8rem;
         line-height: 1.4rem;
+        text-align: justify;
       }
     }
     

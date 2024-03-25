@@ -1,5 +1,6 @@
 .blog__item {
     border: 1px solid #7c8a972e;
+    text-align: justify;
    
 }
 
@@ -26,6 +27,7 @@
     font-size: 0.7rem;
     line-height: 1.5rem;
     margin-top: 10px;
+    
     }
     
     .blog__title {

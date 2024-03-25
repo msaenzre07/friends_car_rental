@@ -18,24 +18,24 @@ const AboutSection = ({ aboutClass }) => {
           <Col lg="6" md="6">
             <div className="about__section-content">
               <h4 className="section__subtitle">¿Quiénes Somos?</h4>
-              <h2 className="section__title">Friend's Car Rental</h2>
+              <h2 className="section__title">Friend's Car Rent</h2>
               <h2 className="section__title">Misión</h2>
-              <p className="section__description">
-              Friend's Car Rental es una agencia que se estableció en el 2024. Nació con la misión de proporcionar 
+              <p className="section__description" style={{ textAlign: "justify" }}>
+              Friend's Car Rent es una agencia que se estableció en el 2024. Nació con la misión de proporcionar 
               soluciones de movilidad eficientes y confiables a nuestros clientes ofreciendo una flota diversificada 
               de vehículos de alta calidad y un servicio excepcional. Nos comprometemos a satisfacer las necesidades 
               de transporte de nuestros clientes, contribuyendo a experiencias de viajes seguros, cómodos y memorables.
              </p>
               
              <h2 className="section__title">Visión</h2>
-              <p className="section__description">
+              <p className="section__description" style={{ textAlign: "justify" }}>
               Ser la agencia de renta de autos líder a nivel regional, reconocida por la excelencia en el servicio al cliente,
               la innovación en soluciones de movilidad y la sostenibilidad ambiental. Nos esforzamos por ser pioneros en la adopción
               de tecnologías emergentes para mejorar la eficiencia operativa y ofrecer experiencias de viajes fluidas. 
               Aspiramos a ser un referente en la industria, estableciendo estándares de calidad y compromiso social.
               </p>
     
-             <div className="about__section-content">
+             <div className="about__section-content" >
               <h4 className="section__subtitle">Nuestros</h4>
               <h2 className="section__title">Valores</h2>
             </div>

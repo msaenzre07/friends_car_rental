@@ -9,7 +9,7 @@ import "../styles/contact.css";
 const Contacto = () => {
   return (
     <Helmet title="Contact">
-      <CommonSection title="Contáctanos" />
+      <CommonSection title="Contactános Ahora" />
       <section>
         <Container>
           <Row>
