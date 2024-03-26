@@ -26,7 +26,7 @@ display: "Reservar",
   
 
 {
-path: "/detallesUsuarios",
+path: "/Usuarios",
 display: "Usuarios",
 },
 
@@ -64,7 +64,7 @@ const Header = () => {
                 </button>
 
                 <button className="btn primary_btn">
-                <Link to="/register" className=" d-flex align-items-center gap-1">
+                <Link to="/registro" className=" d-flex align-items-center gap-1">
                   <i class="ri-user-fill" style={{ color: '#faa935'}}></i> Registrarse
                 </Link>
                 </button>
@@ -122,9 +122,9 @@ const Header = () => {
               className=" d-flex align-items-center justify-content-end "
             >
               <button className="header__btn btn ">
-                <Link to="/contact">
-                  <i class="ri-whatsapp-line" style={{ color: '#faa935'}}></i> Contáctenos 
-                </Link>
+              <a href="https://wa.me/50686870428?text=¿¡Hola! Necesito información para realizar una reservación de vehículo" target="_blank" rel="noopener noreferrer">
+    <i className="ri-whatsapp-fill" style={{ color: '#00FF00', fontSize: '24px'}}></i> Contáctenos
+  </a>
               </button>
             </Col>
           </Row>

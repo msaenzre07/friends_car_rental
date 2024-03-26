@@ -1,17 +1,17 @@
 import React from "react";
 import { Form, FormGroup } from "reactstrap";
-import "../../styles/devolver-car.css";
+import "../../styles/devolver.css";
 
 import Swal from "sweetalert2";
 
-const DevolverCar = () => {
+const Devolver = () => {
   const submitHandler = (event) => {
     event.preventDefault();
   };
   return (
     <>
       <Form onSubmit={submitHandler}>
-      <div className="devolverCar">
+      <div className="devolver">
         <FormGroup className="booking__form d-inline-block me-4 mb-4">
           <label htmlFor="exampleFormControlInput1" className="form-label">
             Fecha:
@@ -20,7 +20,7 @@ const DevolverCar = () => {
         </FormGroup>
         </div>
 
-        <div className="devolverCar">
+        <div className="devolver">
         <FormGroup className="booking__form d-inline-block ms-1 mb-4">
           <label htmlFor="exampleFormControlInput1" className="form-label">
             Hora:
@@ -29,11 +29,11 @@ const DevolverCar = () => {
         </FormGroup>
         </div>
         
-        <div className="devolverCar">
+        <div className="devolver">
         <FormGroup className="booking__form d-inline-block me-4 mb-4">
           <div>
             <label htmlFor="d-flex align-items-center gap-2" className="form-label">
-              Devolver en:
+              Lugar:
             </label>
             <input type="text" placeholder="" />
           </div>
@@ -49,7 +49,7 @@ const DevolverCar = () => {
             diferente deberá pagar un adicional de $66.
           </span>
         </div>
-        <div className="devolverCar text-center mt-5">
+        <div className="devolver text-center mt-5">
         <button>Reservar Ahora</button>
         </div>
       </Form>
@@ -57,4 +57,4 @@ const DevolverCar = () => {
     
   );
 };
-export default DevolverCar;
+export default Devolver;

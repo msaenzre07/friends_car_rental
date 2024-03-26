@@ -3,31 +3,31 @@ import axios from "axios";
 import { Container, Row, Form } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
-import "../styles/detallesUsuarios.css";
+import "../styles/usuarios.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Swal from 'sweetalert2';
 
 
-const DetallesUsuarios= () => {
+const Usuarios= () => {
 
 // variables que add valores en los campos
 const [nombre, setNombre] = useState("");
   const [numCedula, setNumCedula] = useState("");
   const [edad, setEdad] = useState("");
-  const [email, setEmail] = useState("");
+  const [correo, setCorreo] = useState("");
   const [file, setFile] = useState("");
   const [id, setId] = useState();
 
 
 
 //Add datos Usuarios
-const addDetallesUsuarios = () => {
+const addUsuarios = () => {
   axios.post("http://localhost:3001/api/create", {
      nombre: nombre,
      numCedula: numCedula,
       edad: edad,
-      email:email,
+      correo: correo,
       file: file
     })
     .then(() => {
@@ -96,9 +96,9 @@ const addDetallesUsuarios = () => {
   
               <div className="col-md-6">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Correo electrónico:</label>
-                <input type="text"  value={email}
+                <input type="text"  value={correo}
                       onChange={(event) => {
-                        setEmail(event.target.value);
+                        setCorreo(event.target.value);
                       }}
                 className="form-control" id="exampleFormControlInput1"/>
               </div>
@@ -114,7 +114,7 @@ const addDetallesUsuarios = () => {
               </div>
   
               <div className="mb-3" style={{ textAlign: 'center' }}>
-                  <button type="submit" className="btn btn-primary mt-3 "value="Submit" onClick={addDetallesUsuarios} style={{ fontSize: '1.1em', padding: '8px 16px' }}>Enviar</button>
+                  <button type="submit" className="btn btn-primary mt-3 "value="Submit" onClick={addUsuarios} style={{ fontSize: '1.1em', padding: '8px 16px' }}>Enviar</button>
               </div>
               </Form>
        
@@ -126,4 +126,4 @@ const addDetallesUsuarios = () => {
       );
   };
 
-export default DetallesUsuarios;
+export default Usuarios;

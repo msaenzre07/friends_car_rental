@@ -2,14 +2,14 @@ import React from "react";
 import { Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../../styles/car-item.css";
-import DetallesUsuarios from "../../pages/DetallesUsuarios";
+import Usuarios from "../../pages/Usuarios";
 
 const CarItem = (props) => {
   const { imgUrl, marca, modelo, precio, pasajeros } = props.item;
 
   return (
     <Col lg="4" md="4" sm="6" className="mb-5">
-      <div className="car__item">
+      <div className="car__item" >
         <div className="car__img">
           <img src={imgUrl} alt="" className="w-100" />
         </div>
@@ -38,6 +38,7 @@ const CarItem = (props) => {
           </button>
         </div>
       </div>
+     
     </Col>
   );
 };

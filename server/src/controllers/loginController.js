@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 const bcrypt = require("bcrypt")
 
 // Rutas de autenticación y registro
-app.post("/register", async (req, res) => {
+app.post("/registroUsuarios", async (req, res) => {
     const { email, password } = req.body;
   
   // Hash de la contraseña

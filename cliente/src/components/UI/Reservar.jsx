@@ -1,10 +1,10 @@
 import React from "react";
-import "../../styles/booking-form.css";
+import "../../styles/reservar.css";
 import { Form, FormGroup } from "reactstrap";
 
 import Swal from "sweetalert2";
 
-const BookingForm = () => {
+const Reservar = () => {
   const submitHandler = (event) => {
     event.preventDefault();
   };
@@ -48,4 +48,4 @@ const BookingForm = () => {
     </Form>
   );
 };
-export default BookingForm;
+export default Reservar;

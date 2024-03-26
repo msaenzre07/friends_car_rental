@@ -8,8 +8,9 @@ import CarDetails from "../pages/CarDetails";
 import Contacto from "../pages/Contacto";
 import Vehiculos from "../pages/Vehiculos";
 import Login from "../pages/Login"
-import Register from "../pages/Register";
-import DetallesUsuarios from "../pages/DetallesUsuarios";
+import Registro from "../pages/Registro";
+import Usuarios from "../pages/Usuarios";
+
 
 
 const Routers = () => {
@@ -22,10 +23,10 @@ const Routers = () => {
             <Route path="/about" element={<About />} />
             <Route path="/cars" element={<CarListing />} />
             <Route path="/cars/:slug" element={<CarDetails />} />
-            <Route path="/detallesUsuarios" element={<DetallesUsuarios />} />
+            <Route path="/Usuarios" element={<Usuarios />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path = "/login" element ={<Login/>} />
-            <Route path = "/register" element ={<Register/>} />
+            <Route path = "/registro" element ={<Registro/>} />
             
         </Routes>
      );

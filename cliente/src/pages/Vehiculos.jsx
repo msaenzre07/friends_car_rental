@@ -9,10 +9,15 @@ import Swal from "sweetalert2";
 
 const Vehiculos = () => {
   // variables que add valores en los campos
-  const [placa, setPlaca] = useState("");
   const [marca, setMarca] = useState("");
   const [modelo, setModelo] = useState("");
+  const [color, setColor] = useState("");
   const [transmision, setTransmision] = useState("");
+  const [kilometraje, setKilometraje] = useState ("");
+  const[precio_dia, setPrecio_dia] =useState ("");
+  const [imagen, setImagen] =useState ("");
+  const[disponibilidad, setDisponibilidad] =useState ("");
+
   const [id, setId] = useState();
 
   const [editar, setEditar] = useState(false);
@@ -23,7 +28,7 @@ const Vehiculos = () => {
   //CRUD-Add Vehiculos
   const addVehiculos = () => {
     axios.post("http://localhost:3001/api/create", {
-        placa: placa,
+    
         marca: marca,
         modelo: modelo,
         transmision: transmision
@@ -57,7 +62,7 @@ const Vehiculos = () => {
     axios
       .put("http://localhost:3001/updateVehiculos", {
         id: id,
-        placa: placa,
+     
         marca: marca,
         modelo: modelo,
         transmision: transmision,
@@ -131,7 +136,7 @@ const Vehiculos = () => {
 
   //VERIFICAR LOS CAMPOS QUE NO SE LIMPIAR Y PONER LA VARIABLE AQUI O QUITAR
   const limpiarCampos = () => {
-    setPlaca("");
+    
     setMarca("");
     setModelo("");
     setTransmision("");
@@ -142,7 +147,7 @@ const Vehiculos = () => {
   //CRUD-Editar vehículos
   const editarVehiculo = (val) => {
     setEditar(true);
-    setPlaca(val.placa);
+    
     setMarca(val.marca);
     setModelo(val.modelo);
     setTransmision(val.transmision);
@@ -168,22 +173,7 @@ const Vehiculos = () => {
               <div className="card text-center">
                 <div className="card-header">Gestión de vehículos</div>
                 <div className="card-body">
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      Placa:{" "}
-                    </span>
-                    <input
-                      type="text"
-                      value={placa}
-                      onChange={(event) => {
-                        setPlaca(event.target.value);
-                      }}
-                      className="form-control"
-                      placeholder="Ingrese un número de placa"
-                      aria-label="Placa"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
+                  
 
                   <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
@@ -264,7 +254,7 @@ const Vehiculos = () => {
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Placa</th>
+                    
                     <th scope="col">Marca</th>
                     <th scope="col">Modelo</th>
                     <th scope="col">Transmision</th>
@@ -276,7 +266,7 @@ const Vehiculos = () => {
                     return (
                       <tr key={val.id}>
                         <th>{val.id}</th>
-                        <td>{val.placa}</td>
+                       
                         <td>{val.marca}</td>
                         <td>{val.modelo}</td>
                         <td>{val.transmision}</td>

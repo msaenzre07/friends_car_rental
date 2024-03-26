@@ -1,9 +1,13 @@
-
+.car__img {
+  width: 100%; /* Esto hará que todas las imágenes tengan el mismo ancho */
+  height: auto; /* Esto mantendrá la proporción de la imagen */
+}
 
 .car__item {
   border: 1px solid #7c8a9736;
   padding: 20px;
   border-radius: 5px;
+  height: 100%;
 }
 
 .car__item-info span i {
@@ -36,8 +40,6 @@
 .car__btn-rent {
   border-radius: 4px 0px 0px 4px;
 }
-
-
 
 .car__item-content h4 {
   font-size: 1.8rem;

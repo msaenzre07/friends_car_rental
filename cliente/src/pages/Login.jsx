@@ -12,8 +12,8 @@ import loginImg from "../assets/all-images/login.png";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
-    email: undefined,
-    password: undefined,
+    correo: undefined,
+    contrasena: undefined,
   });
 
   const handleChange = (event) => {
@@ -46,7 +46,7 @@ const Login = () => {
                     <div className="d-flex flex-row align-items-center mb-0">
                      <i className="ri-mail-check-fill" style={{ color: '#faa935', marginRight: '5px', marginBottom: '29px', marginTop: '6px', fontSize: '24px' }}></i>
                         <div className="form-outline flex-fill mb-0"  >
-                             <input type="text" required id="correo electronico" className="form-control" placeholder="Correo Electrónico"  onchange={handleChange} />
+                             <input type="text" required id="correo" className="form-control" placeholder="Correo Electrónico"  onchange={handleChange} />
                           <label className="form-label" htmlFor="form3Example1c"></label>
                         </div>
                       </div>
@@ -54,7 +54,7 @@ const Login = () => {
                       <div className="d-flex flex-row align-items-center mb-0"> 
                       <i className=" ri-lock-fill" style={{ color: '#faa935', marginRight: '5px', marginBottom: '29px', marginTop: '6px', fontSize: '24px' }}></i>                         
                         <div className="form-outline flex-fill mb-0">
-                          <input type="contrasena" required id="email" className="form-control" placeholder="Contraseña" onchange={handleChange}/>
+                          <input type="contrasena" required id="contrasena" className="form-control" placeholder="Contraseña" onchange={handleChange}/>
                           <label className="form-label" htmlFor="form3Example1c"></label>
                         </div> 
                       </div>
@@ -67,7 +67,7 @@ const Login = () => {
               <div className="links">
                   <a href="#!">Olvidó la Contraseña?</a>
                   <p>
-                    ¿No tiene una cuenta?<Link to="/register">Registrate</Link>
+                    ¿No tiene una cuenta?<Link to="/registroUsuarios">Registrate</Link>
                   </p>
                 </div>
                 </div>

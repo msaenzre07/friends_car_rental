@@ -10,13 +10,14 @@ import registroImg from "../assets/all-images/registro.jpg";
 
 
 
-const Register = () => {
+const Registro = () => {
 
   const [credentials, setCredentials] = useState({
-    usuario: undefined,
-    email: undefined,
-    password: undefined,
-    Repetir_password: undefined,
+    nombre: undefined,
+    tipo_usuario: undefined,
+    correo: undefined,
+   contrasena: undefined,
+    Repetir_contrasena: undefined,
   });
   
   const handleChange = (event) => {
@@ -44,17 +45,30 @@ const Register = () => {
                     <Form onSubmit={handleClick}  >
                       
                      <div className="d-flex flex-row align-items-center mb-0">
-                     <i className="ri-user-fill" style={{ color: '#faa935', marginRight: '5px', marginBottom: '29px', marginTop: '6px', fontSize: '24px' }}></i>
+                     <i className="ri-user-fill" style={{ color: '#faa935', marginRight: '5px', marginBottom: '29px', marginTop: '0px', fontSize: '24px' }}></i>
                         <div className="form-outline flex-fill mb-0"  >
-                             <input type="text" required id="nombre" className="form-control" placeholder="Nombre completo"  onchange={handleChange} />
+                             <input type="text" required id="nombre"  className="form-control" placeholder="Nombre completo"  onchange={handleChange} />
                           <label className="form-label" htmlFor="form3Example1c"></label>
                         </div>
                       </div>
 
+                   
+                      <div className="d-flex flex-row align-items-center mb-2">
+                      <i className="ri-admin-line" style={{ color: '#faa935', marginRight: '5px', marginBottom: '25px', marginTop: '20px', fontSize: '24px' }}></i>
+                     <div className="form-outline flex-fill mb-0"  >         
+                     <select className="form-select" aria-label="Default select example">                       
+                    <option selected>Tipo de Usuario</option>
+                   <option value="1">Admin</option>
+                  <option value="2">Cliente</option>
+  
+                </select>
+                </div>
+                </div>
+
                       <div className="d-flex flex-row align-items-center mb-0">
                       <i className="ri-mail-check-fill" style={{ color: '#faa935', marginRight: '5px', marginBottom: '29px', marginTop: '6px', fontSize: '24px' }}></i>             
                         <div className="form-outline flex-fill mb-0">
-                          <input type="correoElectronico" required id="email" className="form-control" placeholder="Correo electrónico" onchange={handleChange}/>
+                          <input type="email" required id="email" className="form-control" placeholder="Correo electrónico" onchange={handleChange}/>
                           <label className="form-label" htmlFor="form3Example1c"></label>
                         </div>
                       </div>
@@ -62,7 +76,7 @@ const Register = () => {
                       <div className="d-flex flex-row align-items-center mb-0"> 
                       <i className=" ri-lock-fill" style={{ color: '#faa935', marginRight: '5px', marginBottom: '29px', marginTop: '6px', fontSize: '24px' }}></i>                         
                         <div className="form-outline flex-fill mb-0">
-                          <input type="contrasena" required id="email" className="form-control" placeholder="Contraseña" onchange={handleChange}/>
+                          <input type="password" required id="password" className="form-control" placeholder="Contraseña" onchange={handleChange}/>
                           <label className="form-label" htmlFor="form3Example1c"></label>
                         </div> 
                       </div>
@@ -70,7 +84,7 @@ const Register = () => {
                       <div className="d-flex flex-row align-items-center mb-0">
                       <i className="ri-key-2-line" style={{ color: '#faa935', marginRight: '5px', marginBottom: '29px', marginTop: '6px', fontSize: '24px' }}></i>    
                           <div className="form-outline flex-fill mb-0">
-                          <input type="contrasena" required id="contrasena" className="form-control" placeholder="Confirmar contraseña" onchange={handleChange}/>
+                          <input type="password" required id="password" className="form-control" placeholder="Confirmar contraseña" onchange={handleChange}/>
                           <label className="form-label" htmlFor="form3Example1c"></label>
                         </div>
                       </div>
@@ -108,5 +122,5 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Registro;
         
