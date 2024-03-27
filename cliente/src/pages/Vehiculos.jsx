@@ -17,7 +17,6 @@ const Vehiculos = () => {
   const[precio_dia, setPrecio_dia] =useState ("");
   const [imagen, setImagen] =useState ("");
   const[disponibilidad, setDisponibilidad] =useState ("");
-
   const [id, setId] = useState();
 
   const [editar, setEditar] = useState(false);
@@ -31,7 +30,12 @@ const Vehiculos = () => {
     
         marca: marca,
         modelo: modelo,
-        transmision: transmision
+        color: color,
+        transmision: transmision,
+        kilometraje: kilometraje,
+        precio_dia: precio_dia,
+        imagen: imagen,
+        disponibilidad: disponibilidad
       })
       .then(() => {
         getVehiculos();
@@ -65,7 +69,12 @@ const Vehiculos = () => {
      
         marca: marca,
         modelo: modelo,
+        color: color,
         transmision: transmision,
+        kilometraje: kilometraje,
+        precio_dia: precio_dia,
+        imagen: imagen,
+        disponibilidad: disponibilidad
       })
       .then(() => {
         getVehiculos();
@@ -139,7 +148,12 @@ const Vehiculos = () => {
     
     setMarca("");
     setModelo("");
+    setColor("");
     setTransmision("");
+    setKilometraje("");
+    setPrecio_dia("");
+    setImagen("");
+    setDisponibilidad("");
     setId("");
     setEditar(false);
   };
@@ -150,7 +164,12 @@ const Vehiculos = () => {
     
     setMarca(val.marca);
     setModelo(val.modelo);
+    setColor(val.color);
     setTransmision(val.transmision);
+    setKilometraje(val.kilometraje);
+    setPrecio_dia(val.precio_dia);
+    setImagen(val.imagen);
+    setDisponibilidad(val.disponibilidad);
     setId(val.id);
   };
 
@@ -208,6 +227,23 @@ const Vehiculos = () => {
                       aria-describedby="basic-addon1"
                     />
                   </div>
+                  
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      Color:{" "}
+                    </span>
+                    <input
+                      type="text"
+                      value={transmision}
+                      onChange={(event) => {
+                        setColor(event.target.value);
+                      }}
+                      className="form-control"
+                      placeholder="Ingrese tipo de transmisión"
+                      aria-label="transmisión"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
 
                   <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
@@ -225,6 +261,77 @@ const Vehiculos = () => {
                       aria-describedby="basic-addon1"
                     />
                   </div>
+
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      Kilometraje:{" "}
+                    </span>
+                    <input
+                      type="text"
+                      value={transmision}
+                      onChange={(event) => {
+                        setKilometraje(event.target.value);
+                      }}
+                      className="form-control"
+                      placeholder="Ingrese tipo de transmisión"
+                      aria-label="transmisión"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      Precio_día:{" "}
+                    </span>
+                    <input
+                      type="text"
+                      value={transmision}
+                      onChange={(event) => {
+                        setPrecio_dia(event.target.value);
+                      }}
+                      className="form-control"
+                      placeholder="Ingrese tipo de transmisión"
+                      aria-label="transmisión"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      Imagen:{" "}
+                    </span>
+                    <input
+                      type="text"
+                      value={transmision}
+                      onChange={(event) => {
+                        setImagen(event.target.value);
+                      }}
+                      className="form-control"
+                      placeholder="Ingrese tipo de transmisión"
+                      aria-label="transmisión"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      Disponibilidad:{" "}
+                    </span>
+                    <input
+                      type="text"
+                      value={transmision}
+                      onChange={(event) => {
+                        setDisponibilidad(event.target.value);
+                      }}
+                      className="form-control"
+                      placeholder="Ingrese tipo de transmisión"
+                      aria-label="transmisión"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+
+
+
                 </div>
                 <div className="card-footer text-body-muted">
                   {editar ? (
@@ -257,7 +364,12 @@ const Vehiculos = () => {
                     
                     <th scope="col">Marca</th>
                     <th scope="col">Modelo</th>
-                    <th scope="col">Transmision</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Transmisión</th>
+                    <th scope="col">Kilometraje</th>
+                    <th scope="col">Precio_día</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Disponibilidad</th>
                     <th scope="col">Acciones</th>
                   </tr>
                 </thead>
@@ -269,7 +381,12 @@ const Vehiculos = () => {
                        
                         <td>{val.marca}</td>
                         <td>{val.modelo}</td>
+                        <td>{val.color}</td>
                         <td>{val.transmision}</td>
+                        <td>{val.kilometraje}</td>
+                        <td>{val.precio_dia}</td>
+                        <td>{val.imagen}</td>
+                        <td>{val.disponibilidad}</td>
                         <td>
                           <div
                             className="btn-group"
