@@ -38,8 +38,8 @@ const Registro = () => {
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-lg-12 col-xl-11">
             <div className="card text-black" style={{ borderRadius: '25px' }}>
-              <div className="card-body p-md-5">
-                <div className="row justify-content-center">
+              <div className="card-body p-md-4">
+                <div className="row justify-content-center ">
                   <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                     <p className="text-center h5 fw-bold mb-3" style={{ color: '#000d6b'}}>Regístrate</p>
                     <Form onSubmit={handleClick}  >
@@ -53,19 +53,19 @@ const Registro = () => {
                       </div>
 
                    
-                      <div className="d-flex flex-row align-items-center mb-2">
-                      <i className="ri-admin-line" style={{ color: '#faa935', marginRight: '5px', marginBottom: '25px', marginTop: '20px', fontSize: '24px' }}></i>
+                      <div className="d-flex flex-row align-items-start mb-2">
+                      <i className="ri-admin-line" style={{ color: '#faa935', marginRight: '5px', marginBottom: '29px', marginTop: '0px', fontSize: '24px' }}></i>
                      <div className="form-outline flex-fill mb-0"  >         
                      <select className="form-select" aria-label="Default select example">                       
-                    <option selected>Tipo de Usuario</option>
-                   <option value="1">Admin</option>
+                    <option selected >Tipo de Usuario</option>
+                   <option value="1">Administrador</option>
                   <option value="2">Cliente</option>
   
                 </select>
                 </div>
                 </div>
 
-                      <div className="d-flex flex-row align-items-center mb-0">
+                      <div className="d-flex flex-row align-items-start mb-10">
                       <i className="ri-mail-check-fill" style={{ color: '#faa935', marginRight: '5px', marginBottom: '29px', marginTop: '6px', fontSize: '24px' }}></i>             
                         <div className="form-outline flex-fill mb-0">
                           <input type="email" required id="email" className="form-control" placeholder="Correo electrónico" onchange={handleChange}/>

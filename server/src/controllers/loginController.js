@@ -1,18 +1,18 @@
-const connection = require('../models/db')
+const db = require('../models/db')
 const jwt = require('jsonwebtoken');
 
 const bodyParser = require("body-parser")
 const bcrypt = require("bcrypt")
 
 // Rutas de autenticación y registro
-app.post("/registroUsuarios", async (req, res) => {
+app.post("/registro", async (req, res) => {
     const { email, password } = req.body;
   
   // Hash de la contraseña
   const hashedPassword = await bcrypt.hash(password, 10);
   
   // Inserta el nuevo usuario en la base de datos
-  connection.query(
+db.query(
     'INSERT INTO usuarios (email, password) VALUES (?, ?)',
     [email, hashedPassword],
     (err, result) => {
@@ -29,7 +29,7 @@ app.post("/registroUsuarios", async (req, res) => {
     const { email, password } = req.body;
   
 // Busca el usuario en la base de datos
-connection.query(
+db.query(
       'SELECT * FROM usuarios WHERE email = ?',
     [email, password],
     async (err, result) => {

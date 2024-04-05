@@ -1,41 +1,39 @@
 import React, { useState } from "react";
-import axios from "axios";
+import Axios from "axios";
 import { Container, Row } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import Swal from "sweetalert2";
 
-const Vehiculos = () => {
-  // variables que add valores en los campos
+function Vehiculos () {
+  // variables que guardan características de vehículos
   const [marca, setMarca] = useState("");
   const [modelo, setModelo] = useState("");
-  const [color, setColor] = useState("");
   const [transmision, setTransmision] = useState("");
   const [kilometraje, setKilometraje] = useState ("");
-  const[precio_dia, setPrecio_dia] =useState ("");
+  const[precioDia, setPrecioDia] =useState ("");
   const [imagen, setImagen] =useState ("");
-  const[disponibilidad, setDisponibilidad] =useState ("");
+
   const [id, setId] = useState();
 
   const [editar, setEditar] = useState(false);
 
-  //Lista de Vehiculos-se inicializa una lista vacía
+  ///Lista de Vehiculos-se inicializa una lista vacía
   const [vehiculosList, setVehiculos] = useState([]);
 
+
   //CRUD-Add Vehiculos
-  const addVehiculos = () => {
-    axios.post("http://localhost:3001/api/create", {
+ const add = () => {
+    Axios.post("http://localhost:3010/create", {
     
         marca: marca,
         modelo: modelo,
-        color: color,
         transmision: transmision,
         kilometraje: kilometraje,
-        precio_dia: precio_dia,
-        imagen: imagen,
-        disponibilidad: disponibilidad
+        precioDia: precioDia,
+        imagen: imagen
+      
       })
       .then(() => {
         getVehiculos();
@@ -63,18 +61,17 @@ const Vehiculos = () => {
 
   //CRUD-update  Vehiculos ruta
   const updateVehiculos = () => {
-    axios
-      .put("http://localhost:3001/updateVehiculos", {
+    Axios
+      .put("http://localhost:3010/updateVehiculos", {
         id: id,
      
         marca: marca,
         modelo: modelo,
-        color: color,
         transmision: transmision,
         kilometraje: kilometraje,
-        precio_dia: precio_dia,
-        imagen: imagen,
-        disponibilidad: disponibilidad
+        precioDia: precioDia,
+        imagen: imagen
+      
       })
       .then(() => {
         getVehiculos();
@@ -85,7 +82,7 @@ const Vehiculos = () => {
             "<i>El vehículo <strong> " +
             marca +
             " </strong>fue actualizado con exito!!!</i>",
-          icon: "sucess",
+          icon: "success",
           timer: 3000,
         }).catch(function (error) {
           Swal.fire({
@@ -115,8 +112,8 @@ const Vehiculos = () => {
       confirmButtonText: "Si, eliminarlo!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios
-          .delete(`http://localhost:3001/api/delete/${val.id}`)
+        Axios
+          .delete(`http://localhost:3010/api/delete/${val.id}`)
           .then(() => {
             getVehiculos();
             limpiarCampos();
@@ -143,17 +140,15 @@ const Vehiculos = () => {
     });
   };
 
-  //VERIFICAR LOS CAMPOS QUE NO SE LIMPIAR Y PONER LA VARIABLE AQUI O QUITAR
+  //VERIFICAR LOS CAMPOS QUE NO SE LIMPIAN Y PONER LA VARIABLE AQUI O QUITAR
   const limpiarCampos = () => {
     
     setMarca("");
     setModelo("");
-    setColor("");
     setTransmision("");
     setKilometraje("");
-    setPrecio_dia("");
+    setPrecioDia("");
     setImagen("");
-    setDisponibilidad("");
     setId("");
     setEditar(false);
   };
@@ -164,23 +159,23 @@ const Vehiculos = () => {
     
     setMarca(val.marca);
     setModelo(val.modelo);
-    setColor(val.color);
     setTransmision(val.transmision);
     setKilometraje(val.kilometraje);
-    setPrecio_dia(val.precio_dia);
+    setPrecioDia(val.precio_dia);
     setImagen(val.imagen);
-    setDisponibilidad(val.disponibilidad);
     setId(val.id);
   };
 
-  //CRUD- Add a una Lista de Vehiculos (viene los datos que obtenemos desde la API
-  const getVehiculos = () => {
-    axios.get("http://localhost:3001/Vehiculos").then((response) => {
-      setVehiculos(response.data); //asigna los vehiculos y hace una llamada de los datos desde API
-      alert("Vehículo registrado");
-    });
-  };
-  getVehiculos();
+ //CRUD- Add a una Lista de Vehiculos (viene los datos que obtenemos desde la API
+ const getVehiculos = () => {
+  Axios.get("http://localhost:3010/vehiculos").then((response) => {
+    setVehiculos(response.data); //asigna los vehiculos y hace una llamada de los datos desde API
+    alert("Vehículo registrado");
+  });
+};
+getVehiculos();
+ 
+
 
   return (
     <Helmet title="Mantenimiento de Vehículos">
@@ -227,40 +222,22 @@ const Vehiculos = () => {
                       aria-describedby="basic-addon1"
                     />
                   </div>
-                  
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      Color:{" "}
-                    </span>
-                    <input
-                      type="text"
-                      value={transmision}
-                      onChange={(event) => {
-                        setColor(event.target.value);
-                      }}
-                      className="form-control"
-                      placeholder="Ingrese tipo de transmisión"
-                      aria-label="transmisión"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
+              
+                
+                  <div className="input-group mb-3">      
+                     <select className="form-select"                      
+                    aria-label="Transmisión"
+                    value={transmision}
+                    onChange={(event) => {
+                      setTransmision(event.target.value);
+                    }}
+                  >
+                    <option value="">Transmisión</option>
+                    <option value="Automático">Automático</option>
+                    <option value="Manual">Manual</option>
+                </select>
+                </div>
 
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      Transmisión:{" "}
-                    </span>
-                    <input
-                      type="text"
-                      value={transmision}
-                      onChange={(event) => {
-                        setTransmision(event.target.value);
-                      }}
-                      className="form-control"
-                      placeholder="Ingrese tipo de transmisión"
-                      aria-label="transmisión"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
 
                   <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
@@ -268,69 +245,40 @@ const Vehiculos = () => {
                     </span>
                     <input
                       type="text"
-                      value={transmision}
+                      value={kilometraje}
                       onChange={(event) => {
                         setKilometraje(event.target.value);
                       }}
                       className="form-control"
-                      placeholder="Ingrese tipo de transmisión"
-                      aria-label="transmisión"
+                      placeholder="Ingrese el kilometraje"
+                      aria-label="tkilometraje"
                       aria-describedby="basic-addon1"
                     />
                   </div>
 
                   <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
-                      Precio_día:{" "}
+                      PrecioDía:{" "}
                     </span>
                     <input
                       type="text"
-                      value={transmision}
+                      value={precioDia}
                       onChange={(event) => {
-                        setPrecio_dia(event.target.value);
+                        setPrecioDia(event.target.value);
                       }}
                       className="form-control"
-                      placeholder="Ingrese tipo de transmisión"
-                      aria-label="transmisión"
+                      placeholder="Ingrese el precio por día"
+                      aria-label="precioDia"
                       aria-describedby="basic-addon1"
                     />
                   </div>
 
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      Imagen:{" "}
-                    </span>
-                    <input
-                      type="text"
-                      value={transmision}
-                      onChange={(event) => {
-                        setImagen(event.target.value);
-                      }}
-                      className="form-control"
-                      placeholder="Ingrese tipo de transmisión"
-                      aria-label="transmisión"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
+             
 
-                  <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">
-                      Disponibilidad:{" "}
-                    </span>
-                    <input
-                      type="text"
-                      value={transmision}
-                      onChange={(event) => {
-                        setDisponibilidad(event.target.value);
-                      }}
-                      className="form-control"
-                      placeholder="Ingrese tipo de transmisión"
-                      aria-label="transmisión"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
-
-
+                  <div class="mb-3">
+  
+  <input className="form-control" type="file"  vid="formFile"/>
+</div>
 
                 </div>
                 <div className="card-footer text-body-muted">
@@ -338,19 +286,19 @@ const Vehiculos = () => {
                     <div>
                       <button
                         className="btn btn-warning m-2"
-                        onclick={updateVehiculos}
+                        onClick={updateVehiculos}
                       >
                         Actualizar
                       </button>
                       <button
                         className="btn btn-info m-2"
-                        onclick={limpiarCampos}
+                        onClick={limpiarCampos}
                       >
                         Cancelar
                       </button>
                     </div>
                   ) : (
-                    <button className="btn btn-success" onclick={addVehiculos}>
+                    <button className="btn btn-success" onClick={add}>
                       Registrar
                     </button>
                   )}
@@ -364,12 +312,10 @@ const Vehiculos = () => {
                     
                     <th scope="col">Marca</th>
                     <th scope="col">Modelo</th>
-                    <th scope="col">Color</th>
                     <th scope="col">Transmisión</th>
                     <th scope="col">Kilometraje</th>
-                    <th scope="col">Precio_día</th>
+                    <th scope="col">Precio por día</th>
                     <th scope="col">Imagen</th>
-                    <th scope="col">Disponibilidad</th>
                     <th scope="col">Acciones</th>
                   </tr>
                 </thead>
@@ -378,15 +324,13 @@ const Vehiculos = () => {
                     return (
                       <tr key={val.id}>
                         <th>{val.id}</th>
-                       
+                    
                         <td>{val.marca}</td>
                         <td>{val.modelo}</td>
-                        <td>{val.color}</td>
                         <td>{val.transmision}</td>
                         <td>{val.kilometraje}</td>
-                        <td>{val.precio_dia}</td>
+                        <td>{val.precioDia}</td>
                         <td>{val.imagen}</td>
-                        <td>{val.disponibilidad}</td>
                         <td>
                           <div
                             className="btn-group"
@@ -404,7 +348,7 @@ const Vehiculos = () => {
                             </button>
                             <button
                               type="button"
-                              oclick={() => {
+                              onClick={() => {
                                 deleteVehiculos(val.id);
                               }}
                               className="btn btn-danger"

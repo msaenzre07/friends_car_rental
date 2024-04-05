@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../../styles/car-item.css";
-import Usuarios from "../../pages/Usuarios";
+
 
 const CarItem = (props) => {
   const { imgUrl, marca, modelo, precio, pasajeros } = props.item;
